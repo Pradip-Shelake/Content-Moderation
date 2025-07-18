@@ -60,17 +60,23 @@ A responsive web application for content moderators to efficiently review user-s
 
 ### Setup Instructions
 
-1. **Install Dependencies**
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Pradip-Shelake/Content-Moderation
+   cd Content-Moderation
+   ```
+
+2. **Install Dependencies**
    ```bash
    npm install
    ```
 
-2. **Start Development Server**
+3. **Start Development Server**
    ```bash
    npm start
    ```
 
-3. **Build for Production**
+4. **Build for Production**
    ```bash
    npm run build
    ```
