@@ -1,0 +1,128 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden;
+  transition: margin-left 0.3s ease;
+}
+
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .content-area {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .content-area {
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-area {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .content-area {
+    grid-template-columns: 1fr 450px;
+  }
+}
+
+/* Animation for smooth transitions */
+.app-body {
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  transition: all 0.3s ease;
+}
+
+/* Ensure proper scrolling on mobile */
+@media (max-width: 768px) {
+  .app {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .app-body {
+    overflow: hidden;
+  }
+  
+  .main-content {
+    overflow: auto;
+  }
+} 
+
+.error-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #fca5a5;
+}
+
+.error-banner button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.error-banner button:hover {
+  background: #b91c1c;
+}
+
+/* Ensure main content area can handle pagination properly */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+} 
